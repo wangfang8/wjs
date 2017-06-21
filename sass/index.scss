@@ -1,0 +1,369 @@
+@import 'base.scss';
+
+/*去除bootstrap提供的容器container-fluid自带的padding*/
+
+.wjs-layout {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+/*顶部通栏*/
+
+.wjs-header {
+    .row>div {
+        border: 1px solid #000;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        a {
+            color: gray;
+            font-size: 12px;
+        }
+    }
+    .row>div:first-child a {
+        position: relative;
+        img {
+            position: absolute;
+            left: -20px;
+            top: 25px;
+            display: none;
+            z-index: 999;
+        }
+    }
+    .row>div:first-child a:hover img {
+        display: block;
+    }
+}
+
+
+/*导航条*/
+
+#wjs-nav {
+    padding: 0;
+    a {
+        height: 80px;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 80px;
+        text-align: center;
+        background-color: transparent;
+    }
+    a:hover {
+        border-bottom: 3px solid red;
+    }
+    /*去掉第一个a标签hover时候的底部边框*/
+    a.navbar-brand:hover {
+        border-bottom: none;
+    }
+    a.navbar-brand {
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a.navbar-brand span:nth-child(1) {
+        color: red;
+    }
+    a.navbar-brand span:nth-child(2) {
+        color: black;
+    }
+    /*设置汉堡菜单上下居中*/
+    .navbar-toggle {
+        margin-top: 23px;
+    }
+}
+
+
+/*轮播图*/
+
+.wjs-banner {
+    .item a {
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    /*以什么类名开头*/
+    .item a[class^=banner-img] {
+        height: 410px;
+    }
+    /*设置桌面端的轮播图*/
+    .item a.banner-img-a {
+        background: url('../images/slide_01_2000x410.jpg') no-repeat center;
+    }
+    .item a.banner-img-b {
+        background: url('../images/slide_02_2000x410.jpg') no-repeat center;
+    }
+    .item a.banner-img-c {
+        background: url('../images/slide_03_2000x410.jpg') no-repeat center;
+    }
+    .item a.banner-img-d {
+        background: url('../images/slide_04_2000x410.jpg') no-repeat center;
+    }
+}
+
+
+/*保障区域*/
+
+.wjs-protect {
+    padding: 40px 250px;
+    .media {
+        cursor: pointer;
+        color: gray;
+        &:hover {
+            color: red;
+            text-decoration: underline;
+            a {
+                color: red;
+            }
+        }
+    }
+    .media a {
+        font-size: 45px;
+        color: gray;
+    }
+    .media>div {
+        padding: 10px;
+    }
+}
+
+
+/*预约区域*/
+
+.wjs-book {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 10px 250px;
+    .left {
+        a {
+            color: red;
+            border-bottom: 1px dashed red;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .right {
+        a {
+            color: gray;
+            &:hover {
+                color: red;
+            }
+        }
+    }
+}
+
+
+/*投资区域*/
+
+#wjs-invest {
+    .nav-tabs {
+        li {
+            a {
+                color: gray;
+                border-color: transparent;
+                &:hover {
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+            &.active {
+                border-bottom: 3px solid red;
+                a {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+    .tab-content .row {
+        >div {
+            padding: 10px;
+        }
+        .ticket {
+            color: gray;
+            height: 150px;
+            display: block; // background-color: #ff5a5a;
+            display: flex;
+            box-shadow: 5px 5px 15px goldenrod;
+            text-decoration: none;
+            .right {
+                width: 108px;
+                border-left: 1px dashed #000;
+                text-align: center;
+                padding: 30px 0;
+                position: relative;
+                font-weight: 900;
+                &::before,
+                &::after {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-color: #fff;
+                    position: absolute;
+                    border-radius: 50%;
+                }
+                &::before {
+                    left: -10px;
+                    top: -10px;
+                    border-bottom: 1px solid #000;
+                }
+                &::after {
+                    left: -10px;
+                    bottom: -10px;
+                    border-top: 1px solid #000;
+                }
+                p {
+                    margin-top: 10px;
+                }
+                /*两个字的处理*/
+                span {
+                    border: 1px solid #000;
+                    padding: 0 2px;
+                    border-radius: 5px;
+                    &:nth-child(1) {
+                        color: #ff5a5a;
+                        border-color: #ff5a5a;
+                        margin-right: 5px;
+                    }
+                    &:nth-child(2) {
+                        color: green;
+                        border-color: green;
+                    }
+                }
+            }
+            .left {
+                flex: 1;
+                h3 {
+                    text-align: center;
+                    margin: 0;
+                    padding: 10px 0;
+                    font-weight: normal;
+                }
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 10px;
+                    p {
+                        margin: 0;
+                        padding: 3px 0;
+                        font-weight: 900;
+                    }
+                    .content-r {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        /*红色区域特殊处理*/
+        .ticket.red {
+            background-color: red;
+            color: #fff;
+            .right {
+                border-left-color: #fff;
+            }
+            /*选择字体图标*/
+            &::before {
+                font-size: 40px;
+                position: absolute;
+            }
+        }
+    }
+}
+
+
+/*新闻区域*/
+
+.wjs-news {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    margin: 20px 0;
+    .row {
+        div:nth-child(2) {
+            h2 {
+                border-bottom: 1px solid #000;
+                text-align: center;
+                padding: 10px 0 20px;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #000;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: -10px;
+                    bottom: -5px;
+                }
+            }
+        }
+        div:nth-child(3) {
+            div.line {
+                height: 70%;
+                width: 1px;
+                position: absolute;
+                border-left: 1px dashed #000;
+                top: 70px;
+                left: 50px;
+            }
+            .nav-tabs {
+                // border-color: transparent;
+                li {
+                    margin-bottom: 50px;
+                    a {
+                        border-color: transparent;
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 70px;
+                        background-color: gray;
+                        color: #fff;
+                        font-size: 40px;
+                        padding: 0;
+                        &:hover {
+                            background-color: red;
+                        }
+                    }
+                }
+                li.active a {
+                    background-color: red;
+                }
+            }
+        }
+        div:nth-child(4){
+            .tab-content{
+                margin-top: 20px;
+                li{
+                    padding: 10px 0;
+                    a{
+                        color: gray;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*底部区域*/
+footer{
+    text-align: center;
+    ul{
+        display: inline-block;
+        li{
+            float: left;
+            padding: 0 10px;
+            a{
+            font-size: 100px;
+            color: gray;
+            &:hover{
+                color: gray;
+                text-decoration: none;
+            }
+        }
+        }
+        
+        
+    }
+}

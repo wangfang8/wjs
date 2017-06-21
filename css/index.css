@@ -1,0 +1,457 @@
+@charset "UTF-8";
+/* 导入 字体文件 */
+@font-face {
+  font-family: 'wjsfont';
+  src: url("../fonts/MiFie-Web-Font.eot");
+  src: url("../fonts/MiFie-Web-Font.eot?#iefix") format("embedded-opentype"), url("../fonts/MiFie-Web-Font.woff") format("woff"), url("../fonts/MiFie-Web-Font.ttf") format("truetype"), url("../fonts/MiFie-Web-Font.svg") format("svg");
+}
+/* 定义 使用的class */
+.wjsfont {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'wjsfont';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+}
+
+.wjsfont-logo::before {
+  content: '\e920';
+}
+
+.wjsfont-name::before {
+  content: '\e921';
+}
+
+.wjsfont-e903::before {
+  content: '\e903';
+}
+
+.wjsfont-e901::before {
+  content: '\e901';
+}
+
+.wjsfont-e904::before {
+  content: '\e904';
+}
+
+.wjsfont-e905::before {
+  content: '\e905';
+}
+
+.wjsfont-e902::before {
+  content: '\e902';
+}
+
+/* 添加 产品列表的 文字样式 */
+.wjsfont-e915::before {
+  content: '\e915';
+}
+
+.wjsfont-new01::before {
+  content: "\e90e";
+}
+
+.wjsfont-new02::before {
+  content: "\e90f";
+}
+
+.wjsfont-new03::before {
+  content: "\e910";
+}
+
+.wjsfont-new04::before {
+  content: "\e911";
+}
+
+/* 网页 最下方的 合作单位 */
+.wjsfont-partner01::before {
+  content: "\e946";
+}
+
+.wjsfont-partner02::before {
+  content: "\e92f";
+}
+
+.wjsfont-partner03::before {
+  content: "\e92e";
+}
+
+.wjsfont-partner04::before {
+  content: "\e92a";
+}
+
+.wjsfont-partner05::before {
+  content: "\e929";
+}
+
+.wjsfont-partner06::before {
+  content: "\e931";
+}
+
+.wjsfont-partner07::before {
+  content: "\e92c";
+}
+
+.wjsfont-partner08::before {
+  content: "\e92b";
+}
+
+.wjsfont-partner09::before {
+  content: "\e92d";
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*去除bootstrap提供的容器container-fluid自带的padding*/
+.wjs-layout {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*顶部通栏*/
+.wjs-header .row > div {
+  border: 1px solid #000;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.wjs-header .row > div a {
+  color: gray;
+  font-size: 12px;
+}
+.wjs-header .row > div:first-child a {
+  position: relative;
+}
+.wjs-header .row > div:first-child a img {
+  position: absolute;
+  left: -20px;
+  top: 25px;
+  display: none;
+  z-index: 999;
+}
+.wjs-header .row > div:first-child a:hover img {
+  display: block;
+}
+
+/*导航条*/
+#wjs-nav {
+  padding: 0
+  /*去掉第一个a标签hover时候的底部边框*/
+  /*设置汉堡菜单上下居中*/
+}
+#wjs-nav a {
+  height: 80px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 80px;
+  text-align: center;
+  background-color: transparent;
+}
+#wjs-nav a:hover {
+  border-bottom: 3px solid red;
+}
+#wjs-nav a.navbar-brand:hover {
+  border-bottom: none;
+}
+#wjs-nav a.navbar-brand {
+  font-size: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#wjs-nav a.navbar-brand span:nth-child(1) {
+  color: red;
+}
+#wjs-nav a.navbar-brand span:nth-child(2) {
+  color: black;
+}
+#wjs-nav .navbar-toggle {
+  margin-top: 23px;
+}
+
+/*轮播图*/
+.wjs-banner {
+  /*以什么类名开头*/
+  /*设置桌面端的轮播图*/
+}
+.wjs-banner .item a {
+  width: 100%;
+  display: block;
+}
+.wjs-banner .item a img {
+  width: 100%;
+}
+.wjs-banner .item a[class^=banner-img] {
+  height: 410px;
+}
+.wjs-banner .item a.banner-img-a {
+  background: url("../images/slide_01_2000x410.jpg") no-repeat center;
+}
+.wjs-banner .item a.banner-img-b {
+  background: url("../images/slide_02_2000x410.jpg") no-repeat center;
+}
+.wjs-banner .item a.banner-img-c {
+  background: url("../images/slide_03_2000x410.jpg") no-repeat center;
+}
+.wjs-banner .item a.banner-img-d {
+  background: url("../images/slide_04_2000x410.jpg") no-repeat center;
+}
+
+/*保障区域*/
+.wjs-protect {
+  padding: 40px 250px;
+}
+.wjs-protect .media {
+  cursor: pointer;
+  color: gray;
+}
+.wjs-protect .media:hover {
+  color: red;
+  text-decoration: underline;
+}
+.wjs-protect .media:hover a {
+  color: red;
+}
+.wjs-protect .media a {
+  font-size: 45px;
+  color: gray;
+}
+.wjs-protect .media > div {
+  padding: 10px;
+}
+
+/*预约区域*/
+.wjs-book {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px 250px;
+}
+.wjs-book .left a {
+  color: red;
+  border-bottom: 1px dashed red;
+}
+.wjs-book .left a:hover {
+  text-decoration: none;
+}
+.wjs-book .right a {
+  color: gray;
+}
+.wjs-book .right a:hover {
+  color: red;
+}
+
+/*投资区域*/
+#wjs-invest .nav-tabs li a {
+  color: gray;
+  border-color: transparent;
+}
+#wjs-invest .nav-tabs li a:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+#wjs-invest .nav-tabs li.active {
+  border-bottom: 3px solid red;
+}
+#wjs-invest .nav-tabs li.active a {
+  border-color: transparent;
+}
+#wjs-invest .tab-content .row {
+  /*红色区域特殊处理*/
+}
+#wjs-invest .tab-content .row > div {
+  padding: 10px;
+}
+#wjs-invest .tab-content .row .ticket {
+  color: gray;
+  height: 150px;
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-shadow: 5px 5px 15px goldenrod;
+  text-decoration: none;
+}
+#wjs-invest .tab-content .row .ticket .right {
+  width: 108px;
+  border-left: 1px dashed #000;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+  font-weight: 900
+  /*两个字的处理*/
+}
+#wjs-invest .tab-content .row .ticket .right::before, #wjs-invest .tab-content .row .ticket .right::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+}
+#wjs-invest .tab-content .row .ticket .right::before {
+  left: -10px;
+  top: -10px;
+  border-bottom: 1px solid #000;
+}
+#wjs-invest .tab-content .row .ticket .right::after {
+  left: -10px;
+  bottom: -10px;
+  border-top: 1px solid #000;
+}
+#wjs-invest .tab-content .row .ticket .right p {
+  margin-top: 10px;
+}
+#wjs-invest .tab-content .row .ticket .right span {
+  border: 1px solid #000;
+  padding: 0 2px;
+  border-radius: 5px;
+}
+#wjs-invest .tab-content .row .ticket .right span:nth-child(1) {
+  color: #ff5a5a;
+  border-color: #ff5a5a;
+  margin-right: 5px;
+}
+#wjs-invest .tab-content .row .ticket .right span:nth-child(2) {
+  color: green;
+  border-color: green;
+}
+#wjs-invest .tab-content .row .ticket .left {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#wjs-invest .tab-content .row .ticket .left h3 {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+  font-weight: normal;
+}
+#wjs-invest .tab-content .row .ticket .left .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+}
+#wjs-invest .tab-content .row .ticket .left .content p {
+  margin: 0;
+  padding: 3px 0;
+  font-weight: 900;
+}
+#wjs-invest .tab-content .row .ticket .left .content .content-r {
+  text-align: right;
+}
+#wjs-invest .tab-content .row .ticket.red {
+  background-color: red;
+  color: #fff
+  /*选择字体图标*/
+}
+#wjs-invest .tab-content .row .ticket.red .right {
+  border-left-color: #fff;
+}
+#wjs-invest .tab-content .row .ticket.red::before {
+  font-size: 40px;
+  position: absolute;
+}
+
+/*新闻区域*/
+.wjs-news {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin: 20px 0;
+}
+.wjs-news .row div:nth-child(2) h2 {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 10px 0 20px;
+  position: relative;
+}
+.wjs-news .row div:nth-child(2) h2::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  bottom: -5px;
+}
+.wjs-news .row div:nth-child(3) div.line {
+  height: 70%;
+  width: 1px;
+  position: absolute;
+  border-left: 1px dashed #000;
+  top: 70px;
+  left: 50px;
+}
+.wjs-news .row div:nth-child(3) .nav-tabs li {
+  margin-bottom: 50px;
+}
+.wjs-news .row div:nth-child(3) .nav-tabs li a {
+  border-color: transparent;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  background-color: gray;
+  color: #fff;
+  font-size: 40px;
+  padding: 0;
+}
+.wjs-news .row div:nth-child(3) .nav-tabs li a:hover {
+  background-color: red;
+}
+.wjs-news .row div:nth-child(3) .nav-tabs li.active a {
+  background-color: red;
+}
+.wjs-news .row div:nth-child(4) .tab-content {
+  margin-top: 20px;
+}
+.wjs-news .row div:nth-child(4) .tab-content li {
+  padding: 10px 0;
+}
+.wjs-news .row div:nth-child(4) .tab-content li a {
+  color: gray;
+}
+
+/*底部区域*/
+footer {
+  text-align: center;
+}
+footer ul {
+  display: inline-block;
+}
+footer ul li {
+  float: left;
+  padding: 0 10px;
+}
+footer ul li a {
+  font-size: 100px;
+  color: gray;
+}
+footer ul li a:hover {
+  color: gray;
+  text-decoration: none;
+}
